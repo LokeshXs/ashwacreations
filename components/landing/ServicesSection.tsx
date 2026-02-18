@@ -4,7 +4,7 @@ import { IconPrompt, IconRocket } from "@tabler/icons-react";
 
 export default function ServicesSection() {
     return (
-        <section className="py-24">
+        <section className="py-20">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col gap-6 max-w-2xl items-center text-center mx-auto">
                     <p className="text-sm uppercase tracking-[0.25em] text-primary/70">
