@@ -5,10 +5,10 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col relative overflow-hidden px-4 sm:px-6 md:px-10 lg:px-14 ">
       <div className="flex-1 self-stretch flex flex-col justify-center items-center translate-y-8 sm:translate-y-6 md:translate-y-8 lg:translate-y-12">
-        <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary flex flex-col items-center gap-1 sm:gap-2 leading-[1.1] drop-shadow-md">
+        <div className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary flex flex-col items-center gap-1 sm:gap-2 leading-[1.1] drop-shadow-md">
           <h1 className="text-center">
             Build MVPs{" "}
-            <span className="text-transparent bg-radial from-secondary to-primary bg-clip-text">
+            <span className="text-transparent bg-radial from-secondary to-primary bg-clip-text max-sm:text-6xl">
               5X
             </span>
           </h1>
