@@ -1,5 +1,6 @@
 import ContactSection from "@/components/landing/ContactSection";
 import FAQSection from "@/components/landing/FAQSection";
+import FooterSection from "@/components/landing/FooterSection";
 import HeroSection from "@/components/landing/HeroSection";
 import PricingSection from "@/components/landing/PricingSection";
 import ProcessSection from "@/components/landing/ProcessSection";
@@ -24,6 +25,7 @@ export default function Page() {
       <TestimonialSection/>
       <ContactSection/>
       <FAQSection/>
+      <FooterSection/>
 
 
       

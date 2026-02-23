@@ -50,35 +50,33 @@ const projects: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="  bg-white rounded-lg overflow-hidden border border-neutral-200 hover:border-primary/20 transition-all duration-300 hover:shadow-lg">
+    <div className="bg-white rounded-lg overflow-hidden border border-neutral-200 hover:border-primary/20 transition-all duration-300 hover:shadow-lg">
       {/* Image */}
-      <div className="p-4 bg-neutral-100">
-        <div className="relative aspect-video overflow-hidden rounded-md ">
+      <div className="p-3 sm:p-4 bg-neutral-100">
+        <div className="relative aspect-video overflow-hidden rounded-md">
           <Image
             src={project.image}
             alt={`${project.title} preview`}
             fill
-            className="object-cover transition-transform duration-500 "
+            className="object-cover transition-transform duration-500"
           />
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6 pt-2">
-        <h3 className="text-2xl font-semibold text-primary mb-3">
+      <div className="p-4 sm:p-5 md:p-6 pt-2">
+        <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-2 sm:mb-3">
           {project.title}
         </h3>
-        <p className="text-muted-foreground leading-relaxed mb-6">
+        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
           {project.description}
         </p>
 
         
-      <Button asChild size="lg" className="bg-secondary/90 text-primary font-semibold cursor-pointer hover:bg-secondary rounded-full  [&_svg:not([class*='size-'])]:size-6 group ">
-      <Link href={project.link} target="_blank" className="flex items-center gap-2">
-        Visit
-
-
-          <IconCircleArrowRightFilled className=" group-hover:-rotate-45 transition-transform duration-300"/>
+      <Button asChild size="lg" className="bg-secondary/90 text-primary font-semibold cursor-pointer hover:bg-secondary rounded-full [&_svg:not([class*='size-'])]:size-5 sm:[&_svg:not([class*='size-'])]:size-6 group w-full sm:w-auto">
+      <Link href={project.link} target="_blank" className="flex items-center justify-center gap-2">
+        <span className="text-sm sm:text-base">Visit</span>
+          <IconCircleArrowRightFilled className="group-hover:-rotate-45 transition-transform duration-300"/>
       </Link>
      
       </Button>
@@ -89,24 +87,24 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function ProjectsSection() {
   return (
-    <section className="flex relative">
-      <div className="flex-1 flex items-center py-20 h-screen sticky top-0">
-        <div className="px-14">
-          <h2 className="text-md text-primary uppercase tracking-wider">
+    <section className="flex flex-col lg:flex-row relative">
+      <div className="flex-1 flex items-center py-12 sm:py-16 md:py-20 lg:h-screen lg:sticky lg:top-0">
+        <div className="px-4 sm:px-6 md:px-10 lg:px-14 w-full">
+          <h2 className="text-xs sm:text-sm md:text-md text-primary uppercase tracking-wider">
             Our Projects
           </h2>
-          <p className="mt-12 text-6xl font-semibold text-primary leading-tight">
+          <p className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight">
             Projects We&apos;ve Delivered
           </p>
-          <p className="mt-6 text-muted-foreground max-w-lg text-lg leading-relaxed">
+          <p className="mt-4 sm:mt-5 md:mt-6 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-lg leading-relaxed">
             Our projects showcase our commitment to quality and innovation. Each
             project is a testament to our expertise and dedication.
           </p>
         </div>
       </div>
 
-      <div className="flex-1 bg-primary   ">
-        <div className="space-y-20 px-14 py-14">
+      <div className="flex-1 bg-primary">
+        <div className="space-y-8 sm:space-y-12 md:space-y-16 lg:space-y-20 px-4 sm:px-6 md:px-10 lg:px-14 py-8 sm:py-10 md:py-12 lg:py-14">
             {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
