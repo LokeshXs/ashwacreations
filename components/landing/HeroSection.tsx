@@ -1,11 +1,12 @@
 import { IconCircleArrowRightFilled } from "@tabler/icons-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col relative overflow-hidden px-4 sm:px-6 md:px-10 lg:px-14 ">
+    <section id="home" className="min-h-screen flex flex-col relative overflow-hidden px-4 sm:px-6 md:px-10 lg:px-14 ">
       <div className="flex-1 self-stretch flex flex-col justify-center items-center translate-y-8 sm:translate-y-6 md:translate-y-8 lg:translate-y-12">
-        <div className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary flex flex-col items-center gap-1 sm:gap-2 leading-[1.1] drop-shadow-md">
+        <div className="text-5xl  md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary flex flex-col items-center gap-1 sm:gap-2 leading-[1.1] drop-shadow-md">
           <h1 className="text-center">
             Build MVPs{" "}
             <span className="text-transparent bg-radial from-secondary to-primary bg-clip-text max-sm:text-6xl">
@@ -29,11 +30,14 @@ export default function HeroSection() {
         </p>
 
         <Button
+        asChild
           className="mt-4 sm:mt-6 rounded-full [&_svg:not([class*='size-'])]:size-5 sm:[&_svg:not([class*='size-'])]:size-6 group cursor-pointer"
           size="lg"
         >
+         <Link href="https://cal.com/ashwa-creations/30min" target="_blank" >
           <span className="text-sm sm:text-base">Get A Quote</span>
           <IconCircleArrowRightFilled className="text-secondary group-hover:-rotate-45 transition-transform duration-300" />
+         </Link>
         </Button>
       </div>
       <section>

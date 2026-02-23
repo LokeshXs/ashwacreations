@@ -100,7 +100,7 @@ export default function ContactSection() {
             </p>
             <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8" asChild>
               <Link
-                href="https://calendly.com/your-link"
+                href="https://cal.com/ashwa-creations/30min"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -73,7 +73,7 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="flex flex-col lg:flex-row">
+    <section id="faq" className="flex flex-col lg:flex-row">
       {/* Left Side - Content */}
       <div className="flex-1 bg-primary flex items-center">
         <div className="px-4 sm:px-6 md:px-10 lg:px-14 py-12 sm:py-16 md:py-20 lg:py-0">

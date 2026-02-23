@@ -6,9 +6,11 @@ import { IconCalendarCheck, IconMenu2, IconX } from "@tabler/icons-react";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -36,12 +38,15 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center translate-x-2">
             <Button
+            asChild
               size="lg"
               className="rounded-full bg-secondary text-primary font-semibold hover:bg-secondary/90 transition-all [&_svg:not([class*='size-'])]:size-5 cursor-pointer"
             >
+              <Link href="https://cal.com/ashwa-creations/30min" target="_blank" >
               Book Free Call <IconCalendarCheck />
+              </Link>
             </Button>
           </div>
         </div>

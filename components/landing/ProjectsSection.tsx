@@ -87,7 +87,7 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function ProjectsSection() {
   return (
-    <section className="flex flex-col lg:flex-row relative">
+    <section id="projects" className="flex flex-col lg:flex-row relative">
       <div className="flex-1 flex items-center py-12 sm:py-16 md:py-20 lg:h-screen lg:sticky lg:top-0">
         <div className="px-4 sm:px-6 md:px-10 lg:px-14 w-full">
           <h2 className="text-xs sm:text-sm md:text-md text-primary uppercase tracking-wider">
