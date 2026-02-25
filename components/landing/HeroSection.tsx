@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex flex-col relative overflow-hidden px-4 sm:px-6 md:px-10 lg:px-14 ">
+    <section id="home" className="md:min-h-screen pt-24 pb-12 gap-20 md:p-0 md:gap-0 flex flex-col relative overflow-hidden px-4 sm:px-6 md:px-10 lg:px-14 ">
       <div className="flex-1 self-stretch flex flex-col justify-center items-center translate-y-8 sm:translate-y-6 md:translate-y-8 lg:translate-y-12">
         <div className="text-5xl  md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary flex flex-col items-center gap-1 sm:gap-2 leading-[1.1] drop-shadow-md">
           <h1 className="text-center">
