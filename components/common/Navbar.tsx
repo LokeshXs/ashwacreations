@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { IconCalendarCheck, IconMenu2, IconX } from "@tabler/icons-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -18,12 +19,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed px-4 md:px-6 py-3 top-0 inset-x-0 bg-white/80 border-b md:border border-neutral-200 backdrop-blur-md shadow-sm flex items-center justify-between max-w-full md:max-w-6xl md:mx-auto md:top-4 rounded-none md:rounded-full z-50 md:w-[98%]">
+      <nav className="fixed px-4 md:px-5 py-2 top-0 inset-x-0 bg-white/80 border-b md:border border-neutral-200 backdrop-blur-md shadow-sm flex items-center justify-end max-w-full md:max-w-6xl md:mx-auto md:top-4 rounded-none md:rounded-full z-50 md:w-[98%]">
         <Link
           href="/"
-          className="text-md font-semibold text-primary hover:opacity-80 transition-opacity"
+          className="text-md font-semibold text-primary hover:opacity-80 transition-opacity absolute left-1 top-1/2 -translate-y-1/2"
         >
-          AshwaCreations
+          <Image src="/logo.png" alt="Ashwa Creations Logo" width={64} height={64} />
         </Link>
 
         {/* Desktop Navigation */}

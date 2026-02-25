@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { IconBrandTwitter, IconBrandLinkedin } from "@tabler/icons-react";
+import {  IconBrandLinkedin, IconBrandX } from "@tabler/icons-react";
+import Image from "next/image";
 
 const navigationLinks = [
   { label: "Home", href: "#home" },
@@ -12,15 +13,15 @@ const navigationLinks = [
 
 const socialLinks = [
   {
-    label: "Twitter",
-    href: "https://twitter.com",
-    icon: IconBrandTwitter,
+    label: "X",
+    href: "https://x.com/AshwaCreations",
+    icon: IconBrandX,
   },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com",
-    icon: IconBrandLinkedin,
-  },
+  // {
+  //   label: "LinkedIn",
+  //   href: "https://linkedin.com",
+  //   icon: IconBrandLinkedin,
+  // },
 ];
 
 const legalLinks = [
@@ -36,9 +37,12 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-8 sm:gap-10 md:gap-12">
           {/* Brand Section */}
           <div className="flex flex-col gap-3 sm:gap-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
-              Ashwa<span className="text-primary">Creations</span>
+           <div className=" flex items-center gap-2">
+            <Image src="/logo.png" alt="Ashwa Creations Logo" width={48} height={48} className=" max-sm:w-8"  />
+             <h2 className="text-lg sm:text-2xl md:text-3xl font-bold  text-primary">
+              AshwaCreations
             </h2>
+           </div>
             <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xs">
               Transforming ideas into stunning digital experiences.
             </p>
