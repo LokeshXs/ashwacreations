@@ -1,6 +1,7 @@
 import { IconCircleArrowRightFilled } from "@tabler/icons-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import StatsContainer from "./StatsContainer";
 
 export default function HeroSection() {
   return (
@@ -40,24 +41,7 @@ export default function HeroSection() {
          </Link>
         </Button>
       </div>
-      <section>
-        <div className="container mx-auto py-8 sm:py-10 md:py-12 px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center">
-              <h2 className="text-xl md:text-3xl  sm:text-2xl font-bold text-primary">10+</h2>
-              <p className="text-gray-500 mt-2 text-xs sm:text-sm md:text-base">Projects Delivered</p>
-            </div>
-            <div className="text-center">
-              <h2 className="text-xl md:text-3xl  sm:text-2xl font-bold text-primary">100%</h2>
-              <p className="text-gray-500 mt-2 text-xs sm:text-sm md:text-base">Client Satisfaction</p>
-            </div>
-            <div className="text-center">
-              <h2 className="text-xl md:text-3xl  sm:text-2xl font-bold text-primary">3+</h2>
-              <p className="text-gray-500 mt-2 text-xs sm:text-sm md:text-base">Years of Experience</p>
-            </div>
-          </div>
-        </div>
-      </section>
+   <StatsContainer/>
       <div className=" absolute w-full h-full sm:bg-radial-[100%_100%_at_50%_100%] from-transparent sm:from-50%  bg-radial-[140%_100%_at_50%_100%] from-60% to-secondary/90 bottom-0 left-1/2 -translate-x-1/2 -z-2 "/>
     </section>
   );

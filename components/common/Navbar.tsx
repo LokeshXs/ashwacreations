@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { IconCalendarCheck, IconMenu2, IconX } from "@tabler/icons-react";
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useScroll, useMotionValueEvent } from "motion/react";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -16,15 +17,37 @@ const navLinks = [
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollYProgress } = useScroll();
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest > 0.1) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  });
 
   return (
     <>
-      <nav className="fixed px-4 md:px-5 py-2 top-0 inset-x-0 bg-white/80 border-b md:border border-neutral-200 backdrop-blur-md shadow-sm flex items-center justify-between max-w-full md:max-w-6xl md:mx-auto md:top-4 rounded-none md:rounded-full z-50 md:w-[98%]">
+      <nav
+        className={cn(
+          "fixed px-4 md:px-5 py-2 top-0 inset-x-0 bg-white/80 border-b md:border border-neutral-200 backdrop-blur-md shadow-sm flex items-center justify-between max-w-full md:max-w-6xl md:mx-auto md:top-4 rounded-none md:rounded-full z-50 transition-all duration-500  ",
+          {
+            "md:w-4xl": isScrolled,
+            "md:w-5xl": !isScrolled,
+          },
+        )}
+      >
         <Link
           href="/"
           className="text-md font-semibold text-primary hover:opacity-80 transition-opacity  "
         >
-          <img  src="/logo.png" alt="Ashwa Creations Logo" width={40} height={40} />
+          <img
+            src="/logo.png"
+            alt="Ashwa Creations Logo"
+            width={40}
+            height={40}
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -41,12 +64,15 @@ export default function Navbar() {
           </ul>
           <div className="flex justify-center items-center translate-x-2">
             <Button
-            asChild
+              asChild
               size="lg"
               className="rounded-full bg-secondary text-primary font-semibold hover:bg-secondary/90 transition-all [&_svg:not([class*='size-'])]:size-5 cursor-pointer"
             >
-              <Link href="https://cal.com/ashwa-creations/30min" target="_blank" >
-              Book Free Call <IconCalendarCheck />
+              <Link
+                href="https://cal.com/ashwa-creations/30min"
+                target="_blank"
+              >
+                Book Free Call <IconCalendarCheck />
               </Link>
             </Button>
           </div>
